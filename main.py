@@ -23,16 +23,7 @@ from .models import (
     World,
 )
 
-app = FastAPI(
-    title='fastnoob',
-    version='1.0.0',
-    servers=[
-        {
-            'url': 'https://noobsupreme.com/api/v1',
-            'description': 'Production server (uses live data)',
-        }
-    ],
-)
+app = FastAPI()
 
 
 @app.get('/campaigns', response_model=List[Campaign])
